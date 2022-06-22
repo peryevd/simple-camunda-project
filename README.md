@@ -1,7 +1,7 @@
 ### Clear Install:
  - Download initialize project from:
  ```https://start.camunda.com/ ```
- - Open with IntelliJ IDEA
+ - Open with IntelliJ IDEA Community Edition
  - Add decorator ```@EnableProcessApplication``` to ```src/main/java/com/example/workflow/Application.java```
  - Create folder ```META-INF``` in ```src/main/resources```
  - Create empty file ```processes.xml``` in ```META-INF```
