@@ -1,0 +1,27 @@
+<form>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<script cam-script type="text/form-script">
+        camForm.on('form-loaded', function() {
+            camForm.variableManager.fetchVariable('COMMENT');
+        });
+        camForm.on('variables-fetched', function() {
+            $scope.COMMENT = camForm.variableManager.variable('COMMENT').value;
+        });
+ </script>
+    <p>Upload file for assignment: :</p>
+    <input type="file"
+           cam-variable-name="INVOICE_DOCUMENT"
+           cam-variable-type="File"
+           cam-max-filesize="10000000" />
+    <p></p>
+    Choose assignee user:
+
+    <select cam-variable-name="assignee_admin"
+            cam-variable-type="String">
+        <option>demo</option>
+        <option>dima</option>
+    </select>
+    <p>{{COMMENT}} </p>
+
+    </html>
+</form>

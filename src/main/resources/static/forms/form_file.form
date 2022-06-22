@@ -1,0 +1,35 @@
+{
+  "components": [
+    {
+      "text": "<input type=\"file\"></input>",
+      "type": "text",
+      "id": "Field_04tqz20",
+      "properties": {}
+    },
+    {
+      "label": "Pishi",
+      "type": "textfield",
+      "id": "Field_0540ksj",
+      "key": "field_1w2jbbl",
+      "description": "enter text",
+      "validate": {
+        "required": true,
+        "minLength": 12
+      }
+    },
+    {
+      "action": "reset",
+      "label": "123",
+      "type": "button",
+      "id": "Field_1762eol",
+      "key": "field_19vrz3i"
+    }
+  ],
+  "schemaVersion": 4,
+  "type": "default",
+  "id": "Form_0g2h4sy",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.0.0"
+  }
+}

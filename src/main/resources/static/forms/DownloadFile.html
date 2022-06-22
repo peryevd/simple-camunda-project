@@ -1,0 +1,43 @@
+<form>
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:ui="http://java.sun.com/jsf/facelets"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:f="http://java.sun.com/jsf/core">
+    Download file:
+    <a cam-file-download="INVOICE_DOCUMENT"></a>
+    <p></p>
+    Approve?
+    <input type="checkbox"
+           id="myCheck" onclick="myFunction()"
+           cam-variable-name="APPROVE"
+           cam-variable-type="Boolean" />
+    </html>
+
+    <p></p>
+    <p id="labeltext" style="display:block">Сomment:</p>
+    <textarea id="text" type="text"
+           cam-variable-name="COMMENT"
+           cam-variable-type="String" > </textarea>
+    <script>
+        camForm.on('form-loaded', function() {
+            camForm.variableManager.fetchVariable('COMMENT');
+        });
+        camForm.on('variables-fetched', function() {
+            $scope.COMMENT = camForm.variableManager.variable('COMMENT').value;
+        });
+    function myFunction() {
+        var checkBox = document.getElementById("myCheck");
+        var labeltext = document.getElementById("labeltext");
+        var text = document.getElementById("text");
+
+        if (checkBox.checked == false){
+            labeltext.style.display = "block";
+            text.style.display = "block";
+        } else {
+            labeltext.style.display = "none";
+            text.style.display = "none";
+        }
+    }
+    </script>
+</form>
+
